@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Obstacle Race Panamá">
   <rect width="64" height="64" rx="14" fill="#000000"/>
-  <circle cx="32" cy="32" r="27" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#D21034" stroke-width="2.5"/>
   <g fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
     <path d="M13 42 L26 20 L34 31 L41 19 L51 42 Z" fill="#111111"/>
     <line x1="11" y1="47" x2="53" y2="47"/>
   </g>
-  <circle cx="41" cy="19" r="4" fill="#c0392b"/>
+  <circle cx="41" cy="19" r="4" fill="#D21034"/>
 </svg>
