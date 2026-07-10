@@ -18,7 +18,7 @@
   <image href="logo.jpg" x="735" y="105" width="400" height="400"/>
 
   <!-- left copy -->
-  <text x="80" y="150" fill="#c69a6a" font-size="22" font-weight="700" letter-spacing="7" font-family="Arial, sans-serif">PANAMÁ · PRÓXIMAMENTE</text>
+  <text x="80" y="150" fill="#c69a6a" font-size="22" font-weight="700" letter-spacing="8" font-family="Arial, sans-serif">COMING SOON</text>
 
   <text x="76" y="272" fill="#ffffff" font-size="66" font-weight="900" letter-spacing="-1">CONQUISTA</text>
   <text x="76" y="342" fill="#ffffff" font-size="66" font-weight="900" letter-spacing="-1">LA RUTA.</text>

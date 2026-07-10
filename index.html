@@ -101,7 +101,7 @@
   /* gritty grain overlay */
   body::after{
     content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
-    opacity:.09;mix-blend-mode:soft-light;
+    opacity:.13;mix-blend-mode:soft-light;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
@@ -119,18 +119,17 @@
     border:2px solid transparent;transition:transform .15s var(--ease),box-shadow .2s var(--ease),background .2s,color .2s;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--red);color:#fff;border-color:#1a0f07;box-shadow:var(--hard)}
-  .btn-primary:hover{background:var(--red-bright);transform:translate(-2px,-2px);box-shadow:8px 8px 0 rgba(0,0,0,.55)}
-  .btn-primary:active{transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
-  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--choco-500)}
-  .btn-ghost:hover{border-color:var(--tan);color:var(--tan);transform:translate(-2px,-2px)}
+  .btn-primary{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 3px 0 #6e1b12}
+  .btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);box-shadow:0 5px 0 #6e1b12}
+  .btn-primary:active{transform:translateY(1px);box-shadow:0 2px 0 #6e1b12}
+  .btn-ghost{background:var(--choco-600);color:var(--cream);border-color:var(--choco-600)}
+  .btn-ghost:hover{background:var(--choco-500);color:var(--white);transform:translateY(-2px)}
 
   .flag-rule{height:6px;width:120px;
     background:linear-gradient(90deg,var(--red) 0 33.3%,var(--white) 33.3% 66.6%,var(--blue) 66.6% 100%)}
 
   /* ---------- HEADER / TABS ---------- */
-  header.site{position:sticky;top:0;z-index:100;background:rgba(18,10,4,.9);
-    backdrop-filter:blur(12px) saturate(130%);border-bottom:2px solid var(--choco-700)}
+  header.site{position:sticky;top:0;z-index:100;background:var(--choco-900);box-shadow:0 10px 26px rgba(0,0,0,.5)}
   .nav{display:flex;align-items:center;gap:1.2rem;height:66px}
   .brand{display:flex;align-items:center;gap:.65rem;flex:none}
   .brand img{width:38px;height:38px}
@@ -142,7 +141,7 @@
     font-size:.74rem;color:var(--muted);padding:.5rem .8rem;border:2px solid transparent;border-radius:2px;
     white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
   .tab:hover{color:var(--cream)}
-  .tab.active{color:var(--white);border-color:var(--tan);background:var(--choco-800)}
+  .tab.active{color:#fff;border-color:var(--red);background:var(--red)}
   .nav .btn{flex:none;margin-left:.4rem;padding:.65em 1.1em}
   @media (max-width:860px){
     .nav{flex-wrap:wrap;height:auto;padding:.7rem 0;gap:.6rem 1rem}
@@ -166,10 +165,8 @@
       radial-gradient(120% 90% at 50% 120%, rgba(18,10,4,.9) 40%, transparent 100%),
       linear-gradient(180deg,var(--choco-900),var(--choco-950));}
   #inicio .inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.3rem}
-  .hero-flag{display:inline-flex;align-items:center;gap:.6rem;border:2px solid var(--choco-600);
-    border-radius:2px;padding:.42rem .9rem;background:rgba(36,20,8,.6)}
-  .hero-flag .dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2.4s infinite}
-  .hero-flag span{font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .coming-soon{font-family:var(--font-brutal);font-weight:700;text-transform:uppercase;
+    letter-spacing:.42em;font-size:.82rem;color:var(--tan)}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,57,43,.5)}70%{box-shadow:0 0 0 12px rgba(192,57,43,0)}100%{box-shadow:0 0 0 0 rgba(192,57,43,0)}}
   .emblem{width:min(72vw,340px);height:auto;filter:drop-shadow(0 22px 46px rgba(0,0,0,.65));animation:rise 1s var(--ease) both}
   @keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
@@ -208,23 +205,23 @@
   .grid{display:grid;gap:1.1rem}
   .grid.cols3{grid-template-columns:repeat(3,1fr)}
   .grid.cols2{grid-template-columns:repeat(2,1fr)}
-  .card{position:relative;background:var(--choco-800);border:2px solid var(--choco-600);border-radius:2px;
-    padding:1.5rem 1.4rem;box-shadow:var(--hard);transition:transform .15s var(--ease),border-color .2s,box-shadow .2s}
-  .card:hover{transform:translate(-3px,-3px);border-color:var(--tan);box-shadow:9px 9px 0 rgba(0,0,0,.5)}
+  .card{position:relative;background:var(--choco-800);border-left:5px solid var(--red);
+    padding:1.5rem 1.4rem;transition:transform .15s var(--ease),background .2s}
+  .card:hover{transform:translateY(-3px);background:var(--choco-700)}
   .card .k{font-family:var(--font-brutal);font-weight:700;font-size:.72rem;color:var(--tan-dim);letter-spacing:.1em}
   .card h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.35rem;
     line-height:1;margin:.55rem 0 .55rem;color:var(--white)}
   .card p{font-size:.86rem;color:var(--muted);line-height:1.5}
   .tag{display:inline-block;margin-top:1rem;font-family:var(--font-brutal);font-weight:700;font-size:.6rem;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--red-bright);border:1.5px solid var(--red);
-    border-radius:2px;padding:.22rem .5rem}
-  .note-strip{margin-top:2.4rem;border:2px dashed var(--choco-600);border-radius:2px;padding:1.3rem 1.4rem;
-    display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;background:var(--choco-900)}
+    letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--red);
+    border-radius:2px;padding:.24rem .55rem}
+  .note-strip{margin-top:2.6rem;padding:0;
+    display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem;justify-content:space-between}
   .note-strip p{color:var(--muted);font-size:.9rem;max-width:44ch}
 
   /* PATROCINADORES contact block */
-  .contact-box{margin-top:2.6rem;border:2px solid var(--tan-dim);border-radius:2px;background:var(--choco-800);
-    box-shadow:var(--hard);padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-wrap:wrap;gap:1.4rem;
+  .contact-box{margin-top:2.6rem;background:var(--choco-800);border-left:5px solid var(--red);
+    padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-wrap:wrap;gap:1.4rem;
     align-items:center;justify-content:space-between}
   .contact-box .ci h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
     font-size:1.7rem;color:var(--white);line-height:1;margin-bottom:.5rem}
@@ -234,7 +231,7 @@
   .contact-box .mail:hover{color:var(--cream)}
 
   /* ---------- FOOTER ---------- */
-  footer.site{flex:none;background:var(--choco-950);border-top:2px solid var(--choco-700);padding:2.6rem 0 2rem;margin-top:auto}
+  footer.site{flex:none;background:var(--choco-950);padding:2.6rem 0 2rem;margin-top:auto}
   .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
   .foot-brand{display:flex;align-items:center;gap:.9rem}
   .foot-brand img{width:54px;height:54px}
@@ -244,7 +241,7 @@
   .foot-links a{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
   .foot-links a:hover{color:var(--cream)}
   .foot-bottom{display:flex;flex-wrap:wrap;gap:.7rem 1.3rem;align-items:center;justify-content:space-between;
-    margin-top:2rem;padding-top:1.4rem;border-top:2px solid var(--choco-700)}
+    margin-top:1.8rem}
   .foot-bottom p{font-size:.72rem;color:var(--tan-dim)}
   .powered{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--tan-dim)}
   .powered b{color:var(--muted);font-weight:700}
@@ -286,7 +283,7 @@
   <section class="panel" id="inicio" role="tabpanel" aria-labelledby="tab-inicio">
     <div class="bg" aria-hidden="true"></div>
     <div class="wrap inner">
-      <div class="hero-flag"><span class="dot"></span><span>Panamá · Próximamente</span></div>
+      <p class="coming-soon">Coming soon</p>
       <img class="emblem" src="/logo.jpg" width="340" height="340"
            alt="Obstacle Race Panamá — Conquer the course, become an O'Racer" />
       <h1 class="headline">Conquista la ruta.<br><em>Conviértete en O'Racer.</em></h1>
