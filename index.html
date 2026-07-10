@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Obstacle Race Panamá — Conquer the course, become an O'Racer</title>
 <meta name="description" content="Obstacle Race Panamá — barro, fuerza y comunidad. La carrera de obstáculos que mueve a Panamá por algo más grande que nosotros. Próximamente. Regístrate, explora los recursos y súmate como patrocinador." />
-<meta name="theme-color" content="#160c05" />
+<meta name="theme-color" content="#000000" />
 <meta name="author" content="Obstacle Race Panamá" />
 <link rel="canonical" href="https://obstacleracepanama.com/" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -58,19 +58,19 @@
 
 <style>
   :root{
-    --choco-950:#120a04;
-    --choco-900:#1a0f07;
-    --choco-800:#241408;
-    --choco-700:#2f1c0d;
-    --choco-600:#3d2513;
-    --choco-500:#4f3119;
-    --tan:#c69a6a;
-    --tan-dim:#9a744c;
-    --cream:#f6efe4;
+    --choco-950:#000000;
+    --choco-900:#0c0c0c;
+    --choco-800:#161616;
+    --choco-700:#1e1e1e;
+    --choco-600:#262626;
+    --choco-500:#333333;
+    --tan:#d0d0d0;
+    --tan-dim:#8a8a8a;
+    --cream:#f4f4f4;
     --white:#ffffff;
-    --muted:#b7a189;
+    --muted:#9a9a9a;
     --red:#c0392b;
-    --red-bright:#d8412f;
+    --red-bright:#e0402c;
     --blue:#21386e;
     --maxw:1120px;
     --ease:cubic-bezier(.2,.7,.2,1);
@@ -108,7 +108,7 @@
   .wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
   .eyebrow{
     font-family:var(--font-brutal);font-weight:700;text-transform:uppercase;
-    letter-spacing:.24em;font-size:.72rem;color:var(--tan);
+    letter-spacing:.24em;font-size:.72rem;color:var(--red-bright);
   }
   .read{font-family:var(--font-read)}
 
@@ -161,12 +161,12 @@
   #inicio:not([hidden]){min-height:calc(100svh - 66px);display:flex;align-items:center;justify-content:center}
   #inicio .bg{position:absolute;inset:0;z-index:0;
     background:
-      radial-gradient(60% 55% at 50% 34%, rgba(79,49,25,.5) 0%, transparent 70%),
-      radial-gradient(120% 90% at 50% 120%, rgba(18,10,4,.9) 40%, transparent 100%),
-      linear-gradient(180deg,var(--choco-900),var(--choco-950));}
+      radial-gradient(55% 50% at 50% 33%, rgba(192,57,43,.16) 0%, transparent 68%),
+      radial-gradient(120% 90% at 50% 120%, #000 45%, transparent 100%),
+      linear-gradient(180deg,#0c0c0c,#000);}
   #inicio .inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.3rem}
   .coming-soon{font-family:var(--font-brutal);font-weight:700;text-transform:uppercase;
-    letter-spacing:.42em;font-size:.82rem;color:var(--tan)}
+    letter-spacing:.42em;font-size:.82rem;color:var(--red-bright)}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,57,43,.5)}70%{box-shadow:0 0 0 12px rgba(192,57,43,0)}100%{box-shadow:0 0 0 0 rgba(192,57,43,0)}}
   .emblem{width:min(72vw,340px);height:auto;filter:drop-shadow(0 22px 46px rgba(0,0,0,.65));animation:rise 1s var(--ease) both}
   @keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
