@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Obstacle Race Panamá 2026 — La montaña no se rinde. Tú tampoco.</title>
+<meta name="description" content="Obstacle Race Panamá 2026: barro, altura y fuego. La carrera de obstáculos definitiva de Panamá. Regístrate, entrena con la serie Road to Obstacle Race y súmate como patrocinador. Powered by Ecofit × Panama Sports Magazine." />
+<meta name="theme-color" content="#0d130f" />
+<meta name="author" content="Panama Sports Magazine" />
+<link rel="canonical" href="https://obstacleracepanama.com/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Obstacle Race Panamá" />
+<meta property="og:title" content="Obstacle Race Panamá 2026" />
+<meta property="og:description" content="La carrera de obstáculos definitiva de Panamá. Barro, altura y fuego — 2026. La montaña no se rinde. Tú tampoco." />
+<meta property="og:url" content="https://obstacleracepanama.com/" />
+<meta property="og:image" content="https://obstacleracepanama.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_PA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Obstacle Race Panamá 2026" />
+<meta name="twitter:description" content="La carrera de obstáculos definitiva de Panamá. Barro, altura y fuego — 2026." />
+<meta name="twitter:image" content="https://obstacleracepanama.com/og.png" />
+
+<!-- Google Fonts (permitted by CSP) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "Obstacle Race Panamá 2026",
+  "sport": "Obstacle Course Racing",
+  "description": "La carrera de obstáculos definitiva de Panamá. Barro, altura y fuego. Un ascenso por etapas — de la raíz al volcán.",
+  "startDate": "2026-11-14T06:00:00-05:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "url": "https://obstacleracepanama.com/",
+  "image": "https://obstacleracepanama.com/og.png",
+  "location": {
+    "@type": "Place",
+    "name": "Panamá",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PA"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Panama Sports Magazine",
+    "url": "https://obstacleracepanama.com/"
+  },
+  "sponsor": {
+    "@type": "Organization",
+    "name": "Ecofit"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --night:#0d130f;
+    --night-2:#111a13;
+    --surface:#16211a;
+    --surface-2:#1c2b21;
+    --line:#2c3d31;
+    --bone:#f4f0e6;
+    --bone-dim:#c9c6ba;
+    --muted:#8b978c;
+    --moss:#a7d84a;
+    --moss-deep:#4f7a2a;
+    --forest:#1f4d2e;
+    --ember:#ff5a1f;
+    --ember-soft:#ff7a45;
+    --ember-glow:rgba(255,90,31,.35);
+    --maxw:1200px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --font-display:"Anton",Impact,"Arial Narrow",sans-serif;
+    --font-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --font-serif:"Fraunces",Georgia,serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--night);
+    color:var(--bone);
+    font-family:var(--font-body);
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--ember);color:#fff}
+  :focus-visible{outline:2px solid var(--moss);outline-offset:3px;border-radius:2px}
+
+  /* Grain / texture overlay */
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:9999;pointer-events:none;
+    opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-size:.72rem;
+    color:var(--moss);
+  }
+  .serif-i{font-family:var(--font-serif);font-style:italic;font-weight:400}
+
+  /* ---------- HEADER ---------- */
+  header.site{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .4s var(--ease), border-color .4s var(--ease), backdrop-filter .4s;
+    border-bottom:1px solid transparent;
+  }
+  header.site.scrolled{
+    background:rgba(13,19,15,.82);
+    backdrop-filter:blur(14px) saturate(140%);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:.7rem;letter-spacing:.02em}
+  .brand .mark{width:38px;height:38px;flex:none}
+  .brand b{font-family:var(--font-display);font-size:1.18rem;letter-spacing:.04em;line-height:1;font-weight:400}
+  .brand span{display:block;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;color:var(--moss);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--bone-dim);transition:color .25s}
+  .nav-links a:hover{color:var(--bone)}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--font-body);font-weight:700;
+    text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;
+    padding:.85em 1.5em;border-radius:2px;cursor:pointer;border:none;
+    transition:transform .2s var(--ease), box-shadow .3s var(--ease), background .25s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--ember);color:#180a04;box-shadow:0 0 0 rgba(255,90,31,0)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -8px var(--ember-glow)}
+  .btn-ghost{background:transparent;color:var(--bone);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--moss);color:var(--moss);transform:translateY(-2px)}
+  .nav .btn{padding:.6em 1.2em}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--bone);width:44px;height:40px;border-radius:2px;font-size:1.1rem}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg .glow{
+    position:absolute;width:120vmax;height:120vmax;right:-45vmax;top:-30vmax;
+    background:radial-gradient(circle, var(--ember-glow) 0%, rgba(255,90,31,.08) 30%, transparent 60%);
+    filter:blur(10px);
+  }
+  .hero-bg .glow-2{
+    position:absolute;width:90vmax;height:90vmax;left:-40vmax;bottom:-40vmax;
+    background:radial-gradient(circle, rgba(79,122,42,.25) 0%, transparent 60%);
+  }
+  .contours{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+  .contours path{fill:none;stroke:var(--moss);stroke-width:1;opacity:.16}
+  .contours path.hot{stroke:var(--ember);opacity:.22}
+  .hero-grid-lines{
+    position:absolute;inset:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:80px 80px;opacity:.06;
+    mask-image:radial-gradient(circle at 50% 40%, #000 30%, transparent 78%);
+  }
+  .hero-inner{position:relative;z-index:2;width:100%}
+  .hero-flag{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.6rem;
+    border:1px solid var(--line);border-radius:100px;padding:.45rem .95rem;background:rgba(22,33,26,.5);backdrop-filter:blur(6px)}
+  .hero-flag .dot{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 0 var(--ember-glow);animation:pulse 2.4s infinite}
+  .hero-flag span{font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bone-dim)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,90,31,.5)}70%{box-shadow:0 0 0 12px rgba(255,90,31,0)}100%{box-shadow:0 0 0 0 rgba(255,90,31,0)}}
+
+  h1.title{font-family:var(--font-display);font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase}
+  h1.title .l1{display:block;font-size:clamp(2.9rem,11vw,8.5rem);color:var(--bone)}
+  h1.title .l2{display:block;font-size:clamp(2.9rem,11vw,8.5rem);color:var(--bone)}
+  h1.title .l3{
+    display:block;font-size:clamp(3.6rem,15vw,12rem);
+    color:transparent;-webkit-text-stroke:2px var(--ember);
+    background:linear-gradient(180deg, var(--ember) 0%, var(--ember-soft) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    position:relative;
+  }
+  .hero-tag{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.15rem,2.4vw,1.7rem);color:var(--bone-dim);margin-top:1.4rem;max-width:34ch}
+  .hero-tag b{color:var(--moss);font-weight:500}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.3rem}
+  .hero-cta .btn{padding:1.05em 2em;font-size:.9rem}
+
+  /* Countdown */
+  .countdown-shell{margin-top:3rem;display:flex;flex-direction:column;gap:.9rem}
+  .countdown-label{display:flex;align-items:center;gap:.6rem;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .countdown-label::before{content:"";width:28px;height:1px;background:var(--moss)}
+  .countdown{display:flex;gap:.7rem;flex-wrap:wrap}
+  .cd-unit{
+    position:relative;min-width:92px;flex:1 1 92px;max-width:130px;
+    background:linear-gradient(160deg,var(--surface) 0%,var(--night-2) 100%);
+    border:1px solid var(--line);border-radius:6px;padding:1.1rem .5rem .7rem;text-align:center;
+    overflow:hidden;
+  }
+  .cd-unit::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ember),transparent)}
+  .cd-num{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;color:var(--bone);font-variant-numeric:tabular-nums}
+  .cd-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;font-weight:700}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--muted);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase}
+  .scroll-cue .bar{width:1px;height:38px;background:linear-gradient(var(--moss),transparent);animation:drop 1.8s var(--ease) infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{border-block:1px solid var(--line);background:var(--forest);overflow:hidden;padding:.9rem 0}
+  .marquee-track{display:flex;gap:2.5rem;white-space:nowrap;width:max-content;animation:scroll 26s linear infinite}
+  .marquee span{font-family:var(--font-display);font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bone);display:inline-flex;align-items:center;gap:2.5rem}
+  .marquee span i{color:var(--moss);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{position:relative}
+  .sec{padding:clamp(4.5rem,10vw,8rem) 0}
+  .sec-head{max-width:60ch;margin-bottom:3.2rem}
+  .sec-head .eyebrow{display:block;margin-bottom:1rem}
+  .sec-head h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.94;font-size:clamp(2.1rem,5.5vw,4rem);letter-spacing:.01em}
+  .sec-head p{color:var(--bone-dim);margin-top:1.1rem;font-size:1.05rem;max-width:52ch}
+  .index-num{font-family:var(--font-display);color:var(--line);font-size:1rem;letter-spacing:.2em}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .stat{background:var(--night-2);padding:1.9rem 1.5rem}
+  .stat .n{font-family:var(--font-display);font-size:clamp(2.4rem,4.5vw,3.4rem);line-height:1;color:var(--moss)}
+  .stat .n em{font-style:normal;color:var(--ember);font-size:.6em}
+  .stat .k{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.7rem;font-weight:700}
+
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  .about-copy p{color:var(--bone-dim);font-size:1.08rem;margin-bottom:1.1rem}
+  .about-copy p strong{color:var(--bone);font-weight:600}
+  .about-copy .lead{font-family:var(--font-serif);font-style:italic;font-size:1.4rem;color:var(--bone);line-height:1.4;margin-bottom:1.6rem}
+
+  /* Road to race cards */
+  .road{background:var(--night-2)}
+  .road-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+  .rc{
+    position:relative;background:var(--surface);border:1px solid var(--line);border-radius:8px;
+    padding:1.8rem 1.5rem;overflow:hidden;transition:transform .35s var(--ease),border-color .35s,background .35s;
+  }
+  .rc:hover{transform:translateY(-6px);border-color:var(--moss);background:var(--surface-2)}
+  .rc .rc-ico{width:44px;height:44px;color:var(--moss);margin-bottom:1.1rem}
+  .rc h3{font-family:var(--font-display);font-weight:400;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.4rem}
+  .rc p{font-size:.92rem;color:var(--bone-dim);line-height:1.5}
+  .rc .rc-n{position:absolute;top:1.1rem;right:1.3rem;font-family:var(--font-display);color:var(--line);font-size:1.5rem}
+
+  /* ---------- SPONSORSHIP (ascent) ---------- */
+  .patro{background:linear-gradient(180deg,var(--night) 0%,var(--night-2) 100%)}
+  .tiers{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;align-items:end}
+  .tier{
+    position:relative;background:var(--surface);border:1px solid var(--line);border-radius:8px 8px 0 0;
+    padding:1.6rem 1.25rem 1.6rem;display:flex;flex-direction:column;gap:1rem;
+    transition:transform .35s var(--ease),border-color .35s,box-shadow .4s;
+  }
+  .tier::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:8px 8px 0 0;
+    background:linear-gradient(90deg,var(--moss-deep),var(--moss))}
+  .tier:nth-child(1){margin-top:64px}
+  .tier:nth-child(2){margin-top:48px}
+  .tier:nth-child(3){margin-top:32px}
+  .tier:nth-child(4){margin-top:16px}
+  .tier:nth-child(5){margin-top:0}
+  .tier.peak{border-color:var(--ember);background:var(--surface-2);box-shadow:0 -10px 50px -20px var(--ember-glow)}
+  .tier.peak::before{background:linear-gradient(90deg,var(--ember),var(--ember-soft))}
+  .tier:hover{transform:translateY(-8px);border-color:var(--moss)}
+  .tier.peak:hover{border-color:var(--ember)}
+  .tier-top{display:flex;align-items:baseline;justify-content:space-between}
+  .tier .idx{font-family:var(--font-display);font-size:.9rem;color:var(--muted);letter-spacing:.15em}
+  .tier .peak-flag{font-size:.58rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);border:1px solid var(--ember);border-radius:100px;padding:.2rem .55rem}
+  .tier h3{font-family:var(--font-display);font-weight:400;font-size:1.55rem;text-transform:uppercase;line-height:.95}
+  .tier .price{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);line-height:1;color:var(--moss)}
+  .tier.peak .price{color:var(--ember)}
+  .tier ul{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-top:.3rem}
+  .tier li{position:relative;padding-left:1.3rem;font-size:.86rem;color:var(--bone-dim);line-height:1.4}
+  .tier li::before{content:"";position:absolute;left:0;top:.42em;width:8px;height:8px;border:1.5px solid var(--moss);transform:rotate(45deg)}
+  .tier.peak li::before{border-color:var(--ember)}
+  .tier .tbtn{margin-top:auto;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bone);display:inline-flex;align-items:center;gap:.4rem;transition:gap .25s,color .25s}
+  .tier .tbtn:hover{gap:.7rem;color:var(--moss)}
+  .tier.peak .tbtn:hover{color:var(--ember)}
+  .patro-note{margin-top:2rem;font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+  .patro-note b{color:var(--bone-dim);font-weight:600}
+
+  /* ---------- FINAL CTA ---------- */
+  .final{position:relative;overflow:hidden;background:var(--ember);color:#1a0c05;text-align:center;padding:clamp(4.5rem,9vw,7rem) 0}
+  .final .contours path{stroke:#1a0c05;opacity:.12}
+  .final .contours path.hot{stroke:#1a0c05;opacity:.14}
+  .final .eyebrow{color:#5c2c15}
+  .final h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.9;font-size:clamp(2.4rem,7vw,5.5rem);margin:1rem 0 1.2rem;position:relative;z-index:2}
+  .final p{max-width:44ch;margin:0 auto 2rem;font-size:1.1rem;color:#3a1c0c;position:relative;z-index:2}
+  .final .cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+  .final .btn-dark{background:#180a04;color:var(--bone)}
+  .final .btn-dark:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(0,0,0,.5)}
+  .final .btn-outline{background:transparent;color:#1a0c05;border:1.5px solid #1a0c05}
+  .final .btn-outline:hover{background:#1a0c05;color:var(--ember)}
+
+  /* ---------- FOOTER ---------- */
+  footer.site{background:var(--night);border-top:1px solid var(--line);padding:4rem 0 2.2rem}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid var(--line)}
+  .foot-brand .mark{width:56px;height:56px;margin-bottom:1.1rem}
+  .foot-brand b{font-family:var(--font-display);font-size:1.5rem;letter-spacing:.04em;display:block}
+  .foot-brand .serif-i{color:var(--bone-dim);display:block;margin-top:.5rem;max-width:30ch}
+  .foot-col h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--moss);margin-bottom:1.1rem;font-weight:700}
+  .foot-col a,.foot-col p{display:block;font-size:.92rem;color:var(--bone-dim);margin-bottom:.6rem;transition:color .25s}
+  .foot-col a:hover{color:var(--bone)}
+  .foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.8rem}
+  .foot-bottom p{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .powered{display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--muted)}
+  .powered b{color:var(--bone-dim);font-weight:600}
+  .powered .x{color:var(--ember)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1000px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .road-cards{grid-template-columns:repeat(2,1fr)}
+    .tiers{grid-template-columns:repeat(2,1fr);align-items:stretch}
+    .tier{margin-top:0 !important;border-radius:8px}
+    .about-grid{grid-template-columns:1fr}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .nav-links{display:none}
+    .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+    .nav .btn.desk{display:none}
+    .foot-top{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .tiers{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr}
+    .cd-unit{min-width:70px;flex-basis:70px}
+    .hero-flag{max-width:100%}
+    .hero-flag span{white-space:normal;letter-spacing:.12em;font-size:.62rem}
+    .scroll-cue{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Obstacle Race Panamá — inicio">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="pkG" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#4f7a2a"/><stop offset="1" stop-color="#a7d84a"/>
+          </linearGradient>
+        </defs>
+        <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="none" stroke="#2c3d31" stroke-width="1.5"/>
+        <path d="M8 48 L24 20 L33 36 L41 24 L56 48 Z" fill="none" stroke="url(#pkG)" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M15 48 L24 32 L30 42" fill="none" stroke="#2c3d31" stroke-width="1.4" opacity=".9"/>
+        <circle cx="41" cy="24" r="3.4" fill="#ff5a1f"/>
+        <path d="M41 24 L47 15" stroke="#ff5a1f" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-txt"><b>OBSTACLE RACE</b><span>Panamá · 2026</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#reto">El Reto</a>
+      <a href="#ascension">La Ascensión</a>
+      <a href="#patrocinio">Patrocinio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary desk">Regístrate</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="glow"></div>
+    <div class="glow-2"></div>
+    <div class="hero-grid-lines"></div>
+    <svg class="contours" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <path d="M-100,720 C260,640 520,700 760,600 C980,510 1180,560 1560,470"/>
+      <path d="M-100,640 C260,560 540,620 780,520 C1000,430 1200,480 1560,390"/>
+      <path d="M-100,560 C280,480 560,540 800,440 C1020,350 1220,400 1560,310"/>
+      <path class="hot" d="M-100,480 C300,400 580,460 820,360 C1040,270 1240,320 1560,230"/>
+      <path d="M-100,400 C320,320 600,380 840,280 C1060,190 1260,240 1560,150"/>
+      <path d="M-100,320 C340,240 620,300 860,200 C1080,110 1280,160 1560,70"/>
+      <path class="hot" d="M120,860 C360,760 520,820 640,700 C740,600 700,520 760,420"/>
+      <path d="M1320,860 C1180,760 1240,700 1120,600 C1020,516 1060,470 1000,380"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-flag reveal">
+      <span class="dot"></span>
+      <span>Panamá · Carrera de obstáculos · Edición 2026</span>
+    </div>
+    <h1 class="title reveal" style="transition-delay:.05s">
+      <span class="l1">Obstacle</span>
+      <span class="l2">Race</span>
+      <span class="l3">Panamá</span>
+    </h1>
+    <p class="hero-tag reveal" style="transition-delay:.12s">Barro, altura y fuego. Un ascenso por etapas — de la raíz al volcán. <b>La montaña no se rinde. Tú tampoco.</b></p>
+
+    <div class="hero-cta reveal" style="transition-delay:.18s">
+      <a href="#contacto" class="btn btn-primary">Regístrate ahora
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#patrocinio" class="btn btn-ghost">Oportunidades de patrocinio</a>
+    </div>
+
+    <div class="countdown-shell reveal" style="transition-delay:.24s">
+      <div class="countdown-label">Cuenta regresiva a la salida</div>
+      <div class="countdown" id="countdown" role="timer" aria-live="off" aria-label="Cuenta regresiva a la carrera">
+        <div class="cd-unit"><div class="cd-num" id="cd-days">00</div><div class="cd-tag">Días</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-hours">00</div><div class="cd-tag">Horas</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-mins">00</div><div class="cd-tag">Minutos</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-secs">00</div><div class="cd-tag">Segundos</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Sube</span>
+    <span class="bar"></span>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Barro <i>◆</i> Altura <i>◆</i> Fuego <i>◆</i> Resistencia <i>◆</i> Comunidad <i>◆</i> Panamá <i>◆</i></span>
+    <span>Barro <i>◆</i> Altura <i>◆</i> Fuego <i>◆</i> Resistencia <i>◆</i> Comunidad <i>◆</i> Panamá <i>◆</i></span>
+  </div>
+</div>
+
+<!-- ============ EL RETO ============ -->
+<section class="sec" id="reto">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 — El Reto</span>
+      <h2>No es una carrera.<br>Es un ascenso.</h2>
+      <p>Obstacle Race Panamá lleva al atleta por un recorrido de barro, muros, cuerdas y elevación. Cada obstáculo es una etapa; cada etapa te acerca a la cumbre. Vengas a competir o a superarte, la montaña te devuelve exactamente lo que le entregas.</p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="n">21<em>K</em></div><div class="k">Distancia · ruta reina</div></div>
+      <div class="stat"><div class="n">30<em>+</em></div><div class="k">Obstáculos</div></div>
+      <div class="stat"><div class="n">5</div><div class="k">Categorías / etapas</div></div>
+      <div class="stat"><div class="n">1</div><div class="k">Cumbre por conquistar</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA ASCENSIÓN / ROAD TO ============ -->
+<section class="sec road" id="ascension">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">02 — Road to Obstacle Race</span>
+      <h2>La Ascensión</h2>
+      <p>Nadie llega a la cima sin preparación. Nuestra serie de contenido te entrena por etapas — semana a semana — hasta la línea de salida.</p>
+    </div>
+    <div class="road-cards">
+      <article class="rc reveal">
+        <span class="rc-n">01</span>
+        <svg class="rc-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c2 3 5 4 5 8a5 5 0 0 1-10 0c0-4 3-5 5-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 13v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Nutrición</h3>
+        <p>Combustible para el ascenso: qué comer para rendir y recuperarte sin apagarte a mitad de camino.</p>
+      </article>
+      <article class="rc reveal" style="transition-delay:.08s">
+        <span class="rc-n">02</span>
+        <svg class="rc-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 14s2-4 8-4 8 4 8 4M12 10V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="17" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3>Cardio</h3>
+        <p>El motor. Construye la resistencia que te mantiene en movimiento cuando el terreno se empina.</p>
+      </article>
+      <article class="rc reveal" style="transition-delay:.16s">
+        <span class="rc-n">03</span>
+        <svg class="rc-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6M20 9v6M4 12h4m8 0h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="8" y="8" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3>Fuerza</h3>
+        <p>Muros, cuerdas y cargas. La potencia que convierte cada obstáculo en un peldaño superado.</p>
+      </article>
+      <article class="rc reveal" style="transition-delay:.24s">
+        <span class="rc-n">04</span>
+        <svg class="rc-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Recuperación</h3>
+        <p>Descanso inteligente. Lo que haces entre entrenamientos define cómo llegas a la cumbre.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATROCINIO ============ -->
+<section class="sec patro" id="patrocinio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 — Oportunidades de Patrocinio · Ecofit</span>
+      <h2>Escala con nosotros</h2>
+      <p>Cinco niveles de activación durante todo el año — de la raíz al volcán. Cada marca encuentra su altura dentro del ecosistema Ecofit × Panama Sports Magazine.</p>
+    </div>
+
+    <div class="tiers">
+      <article class="tier reveal">
+        <div class="tier-top"><span class="idx">01</span></div>
+        <h3>Raíz</h3>
+        <div class="price">$5K</div>
+        <ul>
+          <li>Entrada a la plataforma Ecofit</li>
+          <li>Elige un espacio: digital, micro-evento o día de carrera</li>
+          <li>Mención en Panama Sports Magazine</li>
+        </ul>
+        <a href="#contacto" class="tbtn">Elegir Raíz →</a>
+      </article>
+
+      <article class="tier reveal" style="transition-delay:.06s">
+        <div class="tier-top"><span class="idx">02</span></div>
+        <h3>Tronco</h3>
+        <div class="price">$10K</div>
+        <ul>
+          <li>Presencia en dos espacios (digital + micro-eventos o día de carrera)</li>
+          <li>Mayor visibilidad en contenido durante el año</li>
+          <li>Mención destacada en Panama Sports Magazine</li>
+        </ul>
+        <a href="#contacto" class="tbtn">Elegir Tronco →</a>
+      </article>
+
+      <article class="tier reveal" style="transition-delay:.12s">
+        <div class="tier-top"><span class="idx">03</span></div>
+        <h3>Campamento Base</h3>
+        <div class="price">$15K</div>
+        <ul>
+          <li>Título sponsor de una activación específica (micro-evento o serie de contenido)</li>
+          <li>Presencia en los tres espacios</li>
+          <li>Cobertura editorial en Panama Sports Magazine</li>
+        </ul>
+        <a href="#contacto" class="tbtn">Elegir Base →</a>
+      </article>
+
+      <article class="tier reveal" style="transition-delay:.18s">
+        <div class="tier-top"><span class="idx">04</span></div>
+        <h3>Cumbre</h3>
+        <div class="price">$25K</div>
+        <ul>
+          <li>Visibilidad principal en día de carrera</li>
+          <li>Integración digital completa todo el año</li>
+          <li>Perfil editorial en Panama Sports Magazine</li>
+        </ul>
+        <a href="#contacto" class="tbtn">Elegir Cumbre →</a>
+      </article>
+
+      <article class="tier peak reveal" style="transition-delay:.24s">
+        <div class="tier-top"><span class="idx">05</span><span class="peak-flag">La cima</span></div>
+        <h3>Volcán</h3>
+        <div class="price">$40K</div>
+        <ul>
+          <li>Título sponsor de la vertical completa de contenido, todo el año</li>
+          <li>Presencia dominante en los tres espacios</li>
+          <li>Cobertura editorial exclusiva</li>
+        </ul>
+        <a href="#contacto" class="tbtn">Elegir Volcán →</a>
+      </article>
+    </div>
+
+    <p class="patro-note reveal">
+      <b>Activación año completo.</b> Diseñamos paquetes a medida sobre estas bases.
+      Escríbenos a <a href="mailto:patrocinio@obstacleracepanama.com" style="color:var(--moss)">patrocinio@obstacleracepanama.com</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA / CONTACTO ============ -->
+<section class="final" id="contacto">
+  <svg class="contours" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-100,380 C260,320 520,360 760,300 C980,246 1180,276 1560,220"/>
+    <path class="hot" d="M-100,300 C260,240 540,290 780,230 C1000,176 1200,206 1560,150"/>
+    <path d="M-100,220 C280,160 560,210 800,150 C1020,96 1220,126 1560,70"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow reveal">Asegura tu lugar</span>
+    <h2 class="reveal" style="transition-delay:.05s">Nos vemos<br>en la montaña</h2>
+    <p class="reveal" style="transition-delay:.1s">Las inscripciones para Obstacle Race Panamá 2026 abren pronto. Déjanos tu correo para ser de los primeros en la línea de salida — y recibir la serie <em>Road to Obstacle Race</em>.</p>
+    <div class="cta-row reveal" style="transition-delay:.14s">
+      <a href="mailto:hola@obstacleracepanama.com?subject=Quiero%20acceso%20anticipado%20—%20Obstacle%20Race%20Panam%C3%A1%202026" class="btn btn-dark">Quiero acceso anticipado
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:patrocinio@obstacleracepanama.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1%202026" class="btn btn-outline">Ser patrocinador</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 64 64" role="img" aria-label="Logo Obstacle Race Panamá">
+          <defs>
+            <linearGradient id="pkG2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#4f7a2a"/><stop offset="1" stop-color="#a7d84a"/>
+            </linearGradient>
+          </defs>
+          <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="none" stroke="#2c3d31" stroke-width="1.5"/>
+          <path d="M8 48 L24 20 L33 36 L41 24 L56 48 Z" fill="none" stroke="url(#pkG2)" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M15 48 L24 32 L30 42" fill="none" stroke="#2c3d31" stroke-width="1.4"/>
+          <circle cx="41" cy="24" r="3.4" fill="#ff5a1f"/>
+          <path d="M41 24 L47 15" stroke="#ff5a1f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <b>OBSTACLE RACE PANAMÁ</b>
+        <span class="serif-i">Barro, altura y fuego. La montaña no se rinde. Tú tampoco.</span>
+      </div>
+      <div class="foot-col">
+        <h4>Explorar</h4>
+        <a href="#reto">El Reto</a>
+        <a href="#ascension">La Ascensión</a>
+        <a href="#patrocinio">Patrocinio</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@obstacleracepanama.com">hola@obstacleracepanama.com</a>
+        <a href="mailto:patrocinio@obstacleracepanama.com">patrocinio@obstacleracepanama.com</a>
+        <p>Panamá · 2026</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year">2026</span> Obstacle Race Panamá. Todos los derechos reservados.</p>
+      <div class="powered">Powered by <b>Ecofit</b> <span class="x">×</span> <b>Panama Sports Magazine</b></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+
+    /* ==========================================================
+       RACE_DATE — PLACEHOLDER. Update to the real start date/time.
+       Format: ISO 8601 with Panama offset (-05:00, no DST).
+       ========================================================== */
+    var RACE_DATE = new Date("2026-11-14T06:00:00-05:00").getTime();
+
+    var els = {
+      days: document.getElementById("cd-days"),
+      hours: document.getElementById("cd-hours"),
+      mins: document.getElementById("cd-mins"),
+      secs: document.getElementById("cd-secs")
+    };
+    function pad(n){ return (n < 10 ? "0" : "") + n; }
+    function tick(){
+      var diff = RACE_DATE - Date.now();
+      if (diff < 0) diff = 0;
+      var s = Math.floor(diff / 1000);
+      var d = Math.floor(s / 86400);
+      var h = Math.floor((s % 86400) / 3600);
+      var m = Math.floor((s % 3600) / 60);
+      var sec = s % 60;
+      els.days.textContent = pad(d);
+      els.hours.textContent = pad(h);
+      els.mins.textContent = pad(m);
+      els.secs.textContent = pad(sec);
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    /* Header scrolled state */
+    var header = document.getElementById("siteHeader");
+    function onScroll(){
+      if (window.scrollY > 24) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    /* Mobile menu (simple anchor reveal) */
+    var toggle = document.getElementById("menuToggle");
+    var links = document.querySelector(".nav-links");
+    if (toggle) {
+      toggle.addEventListener("click", function(){
+        var open = links.style.display === "flex";
+        if (open) {
+          links.style.display = "";
+          toggle.setAttribute("aria-expanded", "false");
+        } else {
+          links.style.display = "flex";
+          links.style.position = "absolute";
+          links.style.flexDirection = "column";
+          links.style.top = "74px";
+          links.style.right = "1.25rem";
+          links.style.background = "var(--night-2)";
+          links.style.border = "1px solid var(--line)";
+          links.style.borderRadius = "6px";
+          links.style.padding = "1rem 1.4rem";
+          links.style.gap = "1rem";
+          toggle.setAttribute("aria-expanded", "true");
+        }
+      });
+      links.addEventListener("click", function(e){
+        if (e.target.tagName === "A" && window.innerWidth <= 720) {
+          links.style.display = "";
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    /* Scroll reveal */
+    var reveals = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      reveals.forEach(function(el){ io.observe(el); });
+    } else {
+      reveals.forEach(function(el){ el.classList.add("in"); });
+    }
+
+    /* Year */
+    document.getElementById("year").textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>

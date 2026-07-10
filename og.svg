@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d130f"/>
+      <stop offset="1" stop-color="#0a0f0b"/>
+    </linearGradient>
+    <linearGradient id="pk" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f7a2a"/>
+      <stop offset="1" stop-color="#a7d84a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="18%" r="60%">
+      <stop offset="0" stop-color="#ff5a1f" stop-opacity="0.32"/>
+      <stop offset="55%" stop-color="#ff5a1f" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ff5a1f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- topographic contour lines -->
+  <g fill="none" stroke="#a7d84a" stroke-opacity="0.14" stroke-width="1.5">
+    <path d="M-50,520 C220,470 420,500 620,440 C800,388 960,410 1260,350"/>
+    <path d="M-50,460 C220,410 440,445 640,385 C820,330 980,352 1260,290"/>
+    <path d="M-50,400 C240,350 460,385 660,325 C840,272 1000,294 1260,232"/>
+  </g>
+  <g fill="none" stroke="#ff5a1f" stroke-opacity="0.20" stroke-width="1.6">
+    <path d="M-50,340 C260,290 480,325 680,265 C860,212 1020,234 1260,172"/>
+  </g>
+
+  <!-- logo mark -->
+  <g transform="translate(90,86)">
+    <rect x="0" y="0" width="88" height="88" rx="18" fill="none" stroke="#2c3d31" stroke-width="2"/>
+    <path d="M12 68 L34 30 L46 52 L57 34 L78 68 Z" fill="none" stroke="url(#pk)" stroke-width="3.4" stroke-linejoin="round"/>
+    <circle cx="57" cy="34" r="5" fill="#ff5a1f"/>
+    <path d="M57 34 L66 22" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="196" y="124" fill="#f4f0e6" font-size="26" font-weight="700" letter-spacing="8">OBSTACLE RACE</text>
+  <text x="196" y="156" fill="#a7d84a" font-size="16" font-weight="700" letter-spacing="10">PANAMÁ · 2026</text>
+
+  <!-- headline -->
+  <text x="88" y="330" fill="#f4f0e6" font-size="132" font-weight="800" letter-spacing="-2">OBSTACLE</text>
+  <text x="88" y="452" fill="#f4f0e6" font-size="132" font-weight="800" letter-spacing="-2">RACE
+    <tspan fill="#ff5a1f"> PANAMÁ</tspan>
+  </text>
+
+  <!-- tagline -->
+  <text x="90" y="530" fill="#c9c6ba" font-size="30" font-style="italic">Barro, altura y fuego. La montaña no se rinde. Tú tampoco.</text>
+
+  <!-- footer strip -->
+  <line x1="90" y1="566" x2="1110" y2="566" stroke="#2c3d31" stroke-width="1.5"/>
+  <text x="90" y="600" fill="#8b978c" font-size="19" font-weight="700" letter-spacing="3">POWERED BY ECOFIT × PANAMA SPORTS MAGAZINE</text>
+  <text x="1110" y="600" fill="#8b978c" font-size="19" font-weight="700" letter-spacing="3" text-anchor="end">obstacleracepanama.com</text>
+</svg>
