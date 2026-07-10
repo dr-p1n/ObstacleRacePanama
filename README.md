@@ -1,40 +1,46 @@
 # Obstacle Race Panamá
 
-Static, single-page **coming-soon / teaser** site for **Obstacle Race Panamá** — the
-obstacle race that moves Panama, powered by **Ecofit × Panama Sports Magazine**.
+Static, single-page **coming-soon teaser** site for **Obstacle Race Panamá** — the obstacle
+race that moves Panama, with a **collection drive for sneakers and sportswear**.
 
-No build step. Pure static files served from the repo root.
+Brutalist tabbed layout (Inicio · Movimiento · Recursos · Patrocinadores). No build step —
+pure static files served from the repo root.
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
 | `index.html` | The entire landing page (inline CSS + JS, Google Fonts). |
-| `logo.png` | The emblem logo (used in header, hero, footer, and OG image). |
+| `logo.jpg` | The emblem logo (header, hero, footer, and OG image). |
 | `favicon.svg` | Site icon. |
 | `og.png` | 1200×630 social share image (`og.svg` is its source). |
 | `_headers` | Cloudflare Pages security headers (HSTS, CSP, X-Frame-Options, etc.). |
 | `robots.txt` | Allows all crawlers, points to the sitemap. |
 | `sitemap.xml` | Single-URL sitemap for the homepage. |
 
-## ⚠️ Two placeholders to replace before/after go-live
+## ⚠️ One placeholder left: the registration link
 
-1. **Logo** — `logo.png` is currently a **stand-in emblem**. Overwrite it with the real
-   Obstacle Race Panamá artwork (square PNG, transparent or dark background works best),
-   then regenerate `og.png` from `og.svg` so the share image matches.
+Every "Regístrate / Recibir recursos" button reads one constant near the bottom of `index.html`:
 
-2. **Registration link** — every "Regístrate" button reads one constant near the bottom
-   of `index.html`:
+```js
+var REGISTER_URL = "https://forms.gle/REEMPLAZAR-CON-FORM-REAL";
+```
 
-   ```js
-   var REGISTER_URL = "https://forms.gle/REEMPLAZAR-CON-FORM-REAL";
-   ```
+Paste the real Google Form URL there. Until it's a valid `http(s)://` link (and no longer
+contains `REEMPLAZAR`), the buttons fall back to `mailto:info@obstacleracepanama.com` so leads
+are still captured.
 
-   Paste the real Google Form URL there. Until it's a valid `http(s)://` link (and no longer
-   contains `REEMPLAZAR`), the buttons safely fall back to scrolling to the sign-up section.
+Sponsorship / brand contact goes to **info@obstacleracepanama.com** (wired into the
+"Patrocinadores" tab). This mailbox needs email routing on the domain once it's live.
 
-Sponsorship / brand contact goes to **gladysgiselle@gmail.com** (already wired into the
-"Patrocinios" links).
+## Regenerating the OG image
+
+If you replace `logo.jpg`, re-render the share image:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
+  --window-size=1200,630 --default-background-color=00000000 --screenshot=og.png og.svg
+```
 
 ## Deploy (Cloudflare Pages)
 

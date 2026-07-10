@@ -15,7 +15,7 @@
   <rect width="1200" height="630" fill="url(#warm)"/>
 
   <!-- emblem -->
-  <image href="logo.png" x="720" y="95" width="420" height="420"/>
+  <image href="logo.jpg" x="735" y="105" width="400" height="400"/>
 
   <!-- left copy -->
   <text x="80" y="150" fill="#c69a6a" font-size="22" font-weight="700" letter-spacing="7" font-family="Arial, sans-serif">PANAMÁ · PRÓXIMAMENTE</text>
@@ -32,6 +32,6 @@
 
   <!-- footer strip -->
   <line x1="80" y1="560" x2="1120" y2="560" stroke="#3d2513" stroke-width="1.5"/>
-  <text x="80" y="596" fill="#9a744c" font-size="18" font-weight="700" letter-spacing="3" font-family="Arial, sans-serif">POWERED BY ECOFIT × PANAMA SPORTS MAGAZINE</text>
+  <text x="80" y="596" fill="#9a744c" font-size="18" font-weight="700" letter-spacing="3" font-family="Arial, sans-serif">CONQUER THE COURSE · BECOME AN O'RACER</text>
   <text x="1120" y="596" fill="#9a744c" font-size="18" font-weight="700" letter-spacing="3" font-family="Arial, sans-serif" text-anchor="end">obstacleracepanama.com</text>
 </svg>
