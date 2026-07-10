@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Obstacle Race Panamá — Conquer the course, become an O'Racer</title>
-<meta name="description" content="Obstacle Race Panamá — barro, fuerza y comunidad. La carrera de obstáculos que mueve a Panamá por algo más grande que nosotros. Próximamente. Regístrate y entérate primero." />
+<meta name="description" content="Obstacle Race Panamá — barro, fuerza y comunidad. La carrera de obstáculos que mueve a Panamá por algo más grande que nosotros. Próximamente. Regístrate, explora los recursos y súmate como patrocinador." />
 <meta name="theme-color" content="#160c05" />
 <meta name="author" content="Panama Sports Magazine" />
 <link rel="canonical" href="https://obstacleracepanama.com/" />
@@ -26,10 +26,10 @@
 <meta name="twitter:description" content="Conquista la ruta. Conviértete en O'Racer. Próximamente en Panamá." />
 <meta name="twitter:image" content="https://obstacleracepanama.com/og.png" />
 
-<!-- Google Fonts (permitted by CSP) -->
+<!-- Google Fonts: Anton (display) + Space Mono (brutalist body) + Archivo (long copy) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@0,400;0,500;0,600;0,700&family=Space+Mono:wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
 <!-- JSON-LD structured data -->
 <script type="application/ld+json">
@@ -75,8 +75,10 @@
     --blue:#21386e;
     --maxw:1120px;
     --ease:cubic-bezier(.2,.7,.2,1);
-    --font-display:"Anton",Impact,"Arial Narrow",sans-serif;
-    --font-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --hard:6px 6px 0 rgba(0,0,0,.5);
+    --font-display:"Anton",Impact,sans-serif;
+    --font-brutal:"Space Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+    --font-read:"Archivo","Helvetica Neue",Arial,sans-serif;
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -84,16 +86,18 @@
   body{
     background:var(--choco-950);
     color:var(--cream);
-    font-family:var(--font-body);
-    line-height:1.6;
+    font-family:var(--font-brutal);
+    font-size:15px;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
     overflow-x:hidden;
+    min-height:100vh;
+    display:flex;flex-direction:column;
   }
   a{color:inherit;text-decoration:none}
   img,svg{display:block;max-width:100%}
   ::selection{background:var(--red);color:#fff}
-  :focus-visible{outline:2px solid var(--tan);outline-offset:3px;border-radius:2px}
+  :focus-visible{outline:2px solid var(--tan);outline-offset:3px}
 
   /* gritty grain overlay */
   body::after{
@@ -104,196 +108,257 @@
 
   .wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
   .eyebrow{
-    font-family:var(--font-body);font-weight:800;text-transform:uppercase;
-    letter-spacing:.3em;font-size:.72rem;color:var(--tan);
+    font-family:var(--font-brutal);font-weight:700;text-transform:uppercase;
+    letter-spacing:.24em;font-size:.72rem;color:var(--tan);
   }
+  .read{font-family:var(--font-read)}
 
   .btn{
-    display:inline-flex;align-items:center;gap:.55em;font-family:var(--font-body);
-    font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:.85rem;
-    padding:1em 1.9em;border-radius:3px;cursor:pointer;border:none;
-    transition:transform .2s var(--ease),box-shadow .3s var(--ease),background .25s,color .25s;
+    display:inline-flex;align-items:center;gap:.55em;font-family:var(--font-brutal);
+    font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;
+    padding:.95em 1.7em;border-radius:2px;cursor:pointer;
+    border:2px solid transparent;transition:transform .15s var(--ease),box-shadow .2s var(--ease),background .2s,color .2s;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 26px -12px rgba(192,57,43,.7)}
-  .btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(216,65,47,.8)}
-  .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid var(--choco-500)}
-  .btn-ghost:hover{border-color:var(--tan);color:var(--tan);transform:translateY(-2px)}
+  .btn-primary{background:var(--red);color:#fff;border-color:#1a0f07;box-shadow:var(--hard)}
+  .btn-primary:hover{background:var(--red-bright);transform:translate(-2px,-2px);box-shadow:8px 8px 0 rgba(0,0,0,.55)}
+  .btn-primary:active{transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--choco-500)}
+  .btn-ghost:hover{border-color:var(--tan);color:var(--tan);transform:translate(-2px,-2px)}
 
-  /* flag rule */
-  .flag-rule{height:5px;width:120px;border-radius:3px;
+  .flag-rule{height:6px;width:120px;
     background:linear-gradient(90deg,var(--red) 0 33.3%,var(--white) 33.3% 66.6%,var(--blue) 66.6% 100%)}
 
-  /* ---------- HEADER ---------- */
-  header.site{position:fixed;top:0;left:0;right:0;z-index:100;
-    transition:background .4s var(--ease),border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
-  header.site.scrolled{background:rgba(18,10,4,.85);backdrop-filter:blur(12px) saturate(130%);border-bottom:1px solid var(--choco-700)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:.7rem}
-  .brand img{width:42px;height:42px;flex:none}
-  .brand b{font-family:var(--font-display);font-size:1.15rem;letter-spacing:.05em;line-height:1;font-weight:400}
-  .brand span{display:block;font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;color:var(--tan);margin-top:3px}
-  .nav .btn{padding:.7em 1.3em}
-
-  /* ---------- HERO ---------- */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-    text-align:center;padding:110px 0 70px;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;z-index:0;
-    background:
-      radial-gradient(60% 55% at 50% 32%, rgba(79,49,25,.55) 0%, transparent 70%),
-      radial-gradient(120% 90% at 50% 120%, rgba(18,10,4,.9) 40%, transparent 100%),
-      linear-gradient(180deg,var(--choco-900) 0%,var(--choco-950) 100%);
+  /* ---------- HEADER / TABS ---------- */
+  header.site{position:sticky;top:0;z-index:100;background:rgba(18,10,4,.9);
+    backdrop-filter:blur(12px) saturate(130%);border-bottom:2px solid var(--choco-700)}
+  .nav{display:flex;align-items:center;gap:1.2rem;height:66px}
+  .brand{display:flex;align-items:center;gap:.65rem;flex:none}
+  .brand img{width:38px;height:38px}
+  .brand b{font-family:var(--font-display);font-size:1.02rem;letter-spacing:.05em;line-height:1;font-weight:400}
+  .brand span{display:block;font-size:.5rem;letter-spacing:.34em;text-transform:uppercase;color:var(--tan);margin-top:2px}
+  .tabs{display:flex;align-items:center;gap:.35rem;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{font-family:var(--font-brutal);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    font-size:.74rem;color:var(--muted);padding:.5rem .8rem;border:2px solid transparent;border-radius:2px;
+    white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
+  .tab:hover{color:var(--cream)}
+  .tab.active{color:var(--white);border-color:var(--tan);background:var(--choco-800)}
+  .nav .btn{flex:none;margin-left:.4rem;padding:.65em 1.1em}
+  @media (max-width:860px){
+    .nav{flex-wrap:wrap;height:auto;padding:.7rem 0;gap:.6rem 1rem}
+    .tabs{order:3;width:100%;margin-left:0;padding-bottom:.2rem}
+    .nav .btn{margin-left:auto}
   }
-  .hero-bg::before,.hero-bg::after{content:"";position:absolute;border-radius:50%;filter:blur(30px);opacity:.5}
-  .hero-bg::before{width:44vmax;height:44vmax;left:-14vmax;top:-10vmax;background:radial-gradient(circle,rgba(61,37,19,.7),transparent 65%)}
-  .hero-bg::after{width:38vmax;height:38vmax;right:-12vmax;bottom:-12vmax;background:radial-gradient(circle,rgba(47,28,13,.8),transparent 65%)}
-  .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.4rem}
 
-  .hero-flag{display:inline-flex;align-items:center;gap:.7rem;border:1px solid var(--choco-600);
-    border-radius:100px;padding:.42rem .95rem;background:rgba(36,20,8,.55);backdrop-filter:blur(6px)}
+  /* ---------- PANELS ---------- */
+  main{flex:1 0 auto}
+  .panel{padding:clamp(2.5rem,6vw,5rem) 0 clamp(3.5rem,8vw,6rem)}
+  .panel[hidden]{display:none}
+  .panel.enter{animation:pop .45s var(--ease) both}
+  @keyframes pop{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  /* INICIO */
+  #inicio{position:relative;overflow:hidden;text-align:center}
+  #inicio:not([hidden]){min-height:calc(100svh - 66px);display:flex;align-items:center;justify-content:center}
+  #inicio .bg{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(60% 55% at 50% 34%, rgba(79,49,25,.5) 0%, transparent 70%),
+      radial-gradient(120% 90% at 50% 120%, rgba(18,10,4,.9) 40%, transparent 100%),
+      linear-gradient(180deg,var(--choco-900),var(--choco-950));}
+  #inicio .inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.3rem}
+  .hero-flag{display:inline-flex;align-items:center;gap:.6rem;border:2px solid var(--choco-600);
+    border-radius:2px;padding:.42rem .9rem;background:rgba(36,20,8,.6)}
   .hero-flag .dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2.4s infinite}
-  .hero-flag span{font-size:.68rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  .hero-flag span{font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,57,43,.5)}70%{box-shadow:0 0 0 12px rgba(192,57,43,0)}100%{box-shadow:0 0 0 0 rgba(192,57,43,0)}}
-
-  .emblem{width:min(78vw,400px);height:auto;filter:drop-shadow(0 24px 50px rgba(0,0,0,.65));
-    animation:rise 1s var(--ease) both}
-  @keyframes rise{from{opacity:0;transform:translateY(26px) scale(.96)}to{opacity:1;transform:none}}
-
-  h1.headline{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-    line-height:.92;letter-spacing:.01em;font-size:clamp(2.1rem,6.2vw,4.4rem);color:var(--white);max-width:16ch}
+  .emblem{width:min(72vw,340px);height:auto;filter:drop-shadow(0 22px 46px rgba(0,0,0,.65));animation:rise 1s var(--ease) both}
+  @keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+  h1.headline{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.9;
+    letter-spacing:.01em;font-size:clamp(2rem,6vw,4.2rem);color:var(--white);max-width:16ch}
   h1.headline em{font-style:normal;color:var(--red-bright)}
-  .hero-sub{color:var(--muted);font-size:clamp(1.02rem,2.2vw,1.28rem);max-width:46ch;margin-top:-.2rem}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:.6rem}
+  .hero-sub{color:var(--muted);font-size:clamp(.92rem,1.9vw,1.08rem);max-width:52ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:.5rem}
 
-  /* ---------- MANIFESTO ---------- */
-  .sec{padding:clamp(4.5rem,10vw,7.5rem) 0;position:relative}
-  .manifesto{background:
-      radial-gradient(80% 120% at 100% 0%, rgba(61,37,19,.5) 0%, transparent 55%),
-      linear-gradient(180deg,var(--choco-900) 0%,var(--choco-800) 100%);
-    border-top:1px solid var(--choco-700);border-bottom:1px solid var(--choco-700)}
-  .manifesto .wrap{max-width:820px}
-  .manifesto .eyebrow{display:block;margin-bottom:1.1rem}
-  .manifesto h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-    line-height:.95;font-size:clamp(2.2rem,6vw,4rem);color:var(--white);margin-bottom:1.6rem}
-  .manifesto h2 em{font-style:normal;color:var(--red-bright)}
-  .manifesto p{color:var(--cream);opacity:.9;font-size:1.12rem;margin-bottom:1.2rem;max-width:62ch}
-  .manifesto p.lead{font-size:1.35rem;opacity:1}
-  .ethos{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:center;margin-top:2.4rem;
-    font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;
+  /* Generic section head */
+  .head{max-width:64ch;margin-bottom:2.6rem}
+  .head .eyebrow{display:block;margin-bottom:1rem}
+  .head h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.95;
+    font-size:clamp(2rem,5.5vw,3.6rem);color:var(--white)}
+  .head h2 em{font-style:normal;color:var(--red-bright)}
+  .head p{color:var(--muted);margin-top:1rem;font-size:1.02rem;max-width:56ch}
+
+  /* MOVIMIENTO */
+  #movimiento .wrap{max-width:820px}
+  .prose p{color:var(--cream);opacity:.92;margin-bottom:1.15rem;max-width:64ch}
+  .prose p.lead{font-size:1.2rem;color:var(--white);opacity:1}
+  .prose strong{color:var(--tan)}
+  .ethos{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;margin-top:2.4rem;
+    font-family:var(--font-display);text-transform:uppercase;letter-spacing:.05em;
     font-size:clamp(1.1rem,2.6vw,1.7rem);color:var(--choco-500)}
   .ethos b{color:var(--tan);font-weight:400}
   .ethos i{color:var(--red);font-style:normal}
 
-  /* ---------- CTA / CONTACTO ---------- */
-  .contacto{text-align:center;background:linear-gradient(180deg,var(--choco-800),var(--choco-950))}
-  .contacto .wrap{max-width:720px}
-  .contacto .eyebrow{display:block;margin-bottom:1rem}
-  .contacto h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-    line-height:.92;font-size:clamp(2.3rem,6.5vw,4.2rem);color:var(--white);margin-bottom:1.2rem}
-  .contacto p{color:var(--muted);font-size:1.12rem;max-width:48ch;margin:0 auto 2rem}
-  .contacto .hero-cta{margin-top:0}
-  .sponsor-line{margin-top:2.4rem;font-size:.98rem;color:var(--muted)}
-  .sponsor-line a{color:var(--tan);font-weight:700;border-bottom:1px solid var(--tan-dim)}
-  .sponsor-line a:hover{color:var(--cream)}
+  /* CARD GRID (brutalist) */
+  .grid{display:grid;gap:1.1rem}
+  .grid.cols3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols2{grid-template-columns:repeat(2,1fr)}
+  .card{position:relative;background:var(--choco-800);border:2px solid var(--choco-600);border-radius:2px;
+    padding:1.5rem 1.4rem;box-shadow:var(--hard);transition:transform .15s var(--ease),border-color .2s,box-shadow .2s}
+  .card:hover{transform:translate(-3px,-3px);border-color:var(--tan);box-shadow:9px 9px 0 rgba(0,0,0,.5)}
+  .card .k{font-family:var(--font-brutal);font-weight:700;font-size:.72rem;color:var(--tan-dim);letter-spacing:.1em}
+  .card h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.35rem;
+    line-height:1;margin:.55rem 0 .55rem;color:var(--white)}
+  .card p{font-size:.86rem;color:var(--muted);line-height:1.5}
+  .tag{display:inline-block;margin-top:1rem;font-family:var(--font-brutal);font-weight:700;font-size:.6rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--red-bright);border:1.5px solid var(--red);
+    border-radius:2px;padding:.22rem .5rem}
+  .note-strip{margin-top:2.4rem;border:2px dashed var(--choco-600);border-radius:2px;padding:1.3rem 1.4rem;
+    display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;background:var(--choco-900)}
+  .note-strip p{color:var(--muted);font-size:.9rem;max-width:44ch}
+
+  /* PATROCINADORES contact block */
+  .contact-box{margin-top:2.6rem;border:2px solid var(--tan-dim);border-radius:2px;background:var(--choco-800);
+    box-shadow:var(--hard);padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-wrap:wrap;gap:1.4rem;
+    align-items:center;justify-content:space-between}
+  .contact-box .ci h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+    font-size:1.7rem;color:var(--white);line-height:1;margin-bottom:.5rem}
+  .contact-box .ci p{color:var(--muted);font-size:.92rem;max-width:42ch}
+  .contact-box .mail{display:block;margin-top:.7rem;font-family:var(--font-brutal);font-weight:700;
+    color:var(--tan);font-size:1.02rem;word-break:break-all}
+  .contact-box .mail:hover{color:var(--cream)}
 
   /* ---------- FOOTER ---------- */
-  footer.site{background:var(--choco-950);border-top:1px solid var(--choco-700);padding:3.4rem 0 2.2rem}
-  .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
-  .foot-brand{display:flex;align-items:center;gap:1rem}
-  .foot-brand img{width:64px;height:64px}
-  .foot-brand b{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.05em;display:block;line-height:1}
-  .foot-brand a{display:block;font-size:.82rem;color:var(--tan);margin-top:.35rem;letter-spacing:.03em}
-  .foot-links{display:flex;flex-direction:column;gap:.4rem;text-align:right}
-  .foot-links a{font-size:.9rem;color:var(--muted)}
+  footer.site{flex:none;background:var(--choco-950);border-top:2px solid var(--choco-700);padding:2.6rem 0 2rem;margin-top:auto}
+  .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
+  .foot-brand{display:flex;align-items:center;gap:.9rem}
+  .foot-brand img{width:54px;height:54px}
+  .foot-brand b{font-family:var(--font-display);font-size:1.2rem;letter-spacing:.05em;display:block;line-height:1}
+  .foot-brand a{display:block;font-size:.78rem;color:var(--tan);margin-top:.3rem}
+  .foot-links{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem}
+  .foot-links a{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
   .foot-links a:hover{color:var(--cream)}
-  .foot-bottom{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;align-items:center;justify-content:space-between;
-    margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--choco-700)}
-  .foot-bottom p{font-size:.76rem;color:var(--tan-dim);letter-spacing:.02em}
-  .powered{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--tan-dim)}
+  .foot-bottom{display:flex;flex-wrap:wrap;gap:.7rem 1.3rem;align-items:center;justify-content:space-between;
+    margin-top:2rem;padding-top:1.4rem;border-top:2px solid var(--choco-700)}
+  .foot-bottom p{font-size:.72rem;color:var(--tan-dim)}
+  .powered{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--tan-dim)}
   .powered b{color:var(--muted);font-weight:700}
   .powered .x{color:var(--red)}
 
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-  .reveal.in{opacity:1;transform:none}
-
-  @media (max-width:640px){
+  @media (max-width:760px){
+    .grid.cols3,.grid.cols2{grid-template-columns:1fr}
     .foot{flex-direction:column;align-items:flex-start}
-    .foot-links{text-align:left}
-    .hero-cta .btn{flex:1 1 auto;justify-content:center}
+    .contact-box{flex-direction:column;align-items:flex-start}
+    .cta-row .btn{flex:1 1 auto;justify-content:center}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none !important;scroll-behavior:auto}
-    .reveal{opacity:1;transform:none;transition:none}
   }
 </style>
 </head>
 <body id="top">
 
-<!-- ============ HEADER ============ -->
-<header class="site" id="siteHeader">
+<!-- ============ HEADER + TABS ============ -->
+<header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Obstacle Race Panamá — inicio">
-      <img src="/logo.png" width="42" height="42" alt="" />
+    <a class="brand" href="#inicio" aria-label="Obstacle Race Panamá — inicio">
+      <img src="/logo.png" width="38" height="38" alt="" />
       <span><b>OBSTACLE RACE</b><span>Panamá</span></span>
     </a>
-    <a href="#registro" class="btn btn-primary" data-register>Regístrate</a>
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <a class="tab" id="tab-inicio" role="tab" href="#inicio" aria-controls="inicio">Inicio</a>
+      <a class="tab" id="tab-movimiento" role="tab" href="#movimiento" aria-controls="movimiento">Movimiento</a>
+      <a class="tab" id="tab-recursos" role="tab" href="#recursos" aria-controls="recursos">Recursos</a>
+      <a class="tab" id="tab-patrocinadores" role="tab" href="#patrocinadores" aria-controls="patrocinadores">Patrocinadores</a>
+    </nav>
+    <a href="#inicio" class="btn btn-primary" data-register>Regístrate</a>
   </div>
 </header>
 
 <main>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="wrap hero-inner">
-    <div class="hero-flag">
-      <span class="dot"></span>
-      <span>Panamá · Próximamente</span>
+  <!-- ============ INICIO ============ -->
+  <section class="panel" id="inicio" role="tabpanel" aria-labelledby="tab-inicio">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="wrap inner">
+      <div class="hero-flag"><span class="dot"></span><span>Panamá · Próximamente</span></div>
+      <img class="emblem" src="/logo.png" width="340" height="340"
+           alt="Obstacle Race Panamá — Conquer the course, become an O'Racer" />
+      <h1 class="headline">Conquista la ruta.<br><em>Conviértete en O'Racer.</em></h1>
+      <p class="hero-sub">Barro, fuerza y comunidad. Se viene la carrera de obstáculos que mueve a Panamá — por algo más grande que nosotros.</p>
+      <div class="cta-row">
+        <a href="#inicio" class="btn btn-primary" data-register>Regístrate
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#patrocinadores" class="btn btn-ghost">Patrocinadores</a>
+      </div>
     </div>
+  </section>
 
-    <img class="emblem" src="/logo.png" width="400" height="400"
-         alt="Obstacle Race Panamá — Conquer the course, become an O'Racer" />
-
-    <h1 class="headline">Conquista la ruta.<br><em>Conviértete en O'Racer.</em></h1>
-    <p class="hero-sub">Barro, fuerza y comunidad. Se viene la carrera de obstáculos que mueve a Panamá — por algo más grande que nosotros.</p>
-
-    <div class="hero-cta">
-      <a href="#registro" class="btn btn-primary" data-register>Regístrate
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="mailto:gladysgiselle@gmail.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1" class="btn btn-ghost">Patrocinios</a>
+  <!-- ============ MOVIMIENTO ============ -->
+  <section class="panel" id="movimiento" role="tabpanel" aria-labelledby="tab-movimiento" hidden>
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">El movimiento</span>
+        <h2>Más grande que<br>una <em>carrera</em></h2>
+      </div>
+      <div class="prose">
+        <p class="lead read">Obstacle Race Panamá no es solo barro y obstáculos. Es una excusa para movernos, para retarnos juntos y para cuidar el terreno que pisamos.</p>
+        <p class="read">Junto a <strong>Ecofit</strong> y <strong>Panama Sports Magazine</strong> estamos construyendo un movimiento que empuja a Panamá a moverse — con respeto por su gente y por su naturaleza. Corremos por algo más grande que nosotros.</p>
+        <p class="read">Vienen novedades. Prepárate para el barro.</p>
+        <div class="ethos"><b>Barro</b> <i>◆</i> <b>Fuerza</b> <i>◆</i> <b>Comunidad</b> <i>◆</i> <b>Panamá</b></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ MANIFESTO ============ -->
-<section class="sec manifesto">
-  <div class="wrap">
-    <span class="eyebrow reveal">El movimiento</span>
-    <h2 class="reveal">Más grande que<br>una <em>carrera</em></h2>
-    <p class="lead reveal">Obstacle Race Panamá no es solo barro y obstáculos. Es una excusa para movernos, para retarnos juntos y para cuidar el terreno que pisamos.</p>
-    <p class="reveal">Junto a <strong>Ecofit</strong> y <strong>Panama Sports Magazine</strong> estamos construyendo un movimiento que empuja a Panamá a moverse — con respeto por su gente y por su naturaleza. Corremos por algo más grande que nosotros.</p>
-    <p class="reveal">Vienen novedades. Prepárate para el barro.</p>
-    <div class="ethos reveal">
-      <b>Barro</b> <i>◆</i> <b>Fuerza</b> <i>◆</i> <b>Comunidad</b> <i>◆</i> <b>Panamá</b>
+  <!-- ============ RECURSOS ============ -->
+  <section class="panel" id="recursos" role="tabpanel" aria-labelledby="tab-recursos" hidden>
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Recursos</span>
+        <h2>Prepárate para<br>el <em>barro</em></h2>
+        <p class="read">La serie <strong>Road to Obstacle Race</strong> y todo lo que necesitas para llegar listo a la salida. Se libera pronto — regístrate para recibirlo primero.</p>
+      </div>
+      <div class="grid cols3">
+        <article class="card"><div class="k">01</div><h3>Nutrición</h3><p>Combustible para el ascenso: qué comer para rendir y recuperarte.</p><span class="tag">Próximamente</span></article>
+        <article class="card"><div class="k">02</div><h3>Cardio</h3><p>El motor que no se apaga cuando el terreno se empina.</p><span class="tag">Próximamente</span></article>
+        <article class="card"><div class="k">03</div><h3>Fuerza</h3><p>Potencia para muros, cuerdas y cargas — cada obstáculo, un peldaño.</p><span class="tag">Próximamente</span></article>
+        <article class="card"><div class="k">04</div><h3>Recuperación</h3><p>Descanso inteligente: lo que haces entre entrenamientos también cuenta.</p><span class="tag">Próximamente</span></article>
+        <article class="card"><div class="k">05</div><h3>Guía del corredor</h3><p>Qué llevar, cómo prepararte y qué esperar el día de la carrera.</p><span class="tag">Próximamente</span></article>
+        <article class="card"><div class="k">06</div><h3>Preguntas frecuentes</h3><p>Todo lo que necesitas saber sobre categorías, ruta y logística.</p><span class="tag">Próximamente</span></article>
+      </div>
+      <div class="note-strip">
+        <p>Los recursos se liberan por etapas. Regístrate y sé el primero en recibirlos.</p>
+        <a href="#inicio" class="btn btn-primary" data-register>Recibir recursos</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ CONTACTO / REGISTRO ============ -->
-<section class="sec contacto" id="registro">
-  <div class="wrap">
-    <span class="eyebrow reveal">Súmate</span>
-    <h2 class="reveal">¿Listo para<br>el barro?</h2>
-    <p class="reveal">Las inscripciones abren pronto. Regístrate para ser de los primeros en enterarte y asegurar tu lugar en la salida.</p>
-    <div class="hero-cta reveal">
-      <a href="#registro" class="btn btn-primary" data-register>Regístrate ahora
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+  <!-- ============ PATROCINADORES ============ -->
+  <section class="panel" id="patrocinadores" role="tabpanel" aria-labelledby="tab-patrocinadores" hidden>
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Patrocinadores</span>
+        <h2>Sé parte del<br><em>movimiento</em></h2>
+        <p class="read">Obstacle Race Panamá conecta marcas con una comunidad activa que quiere moverse y cuidar su entorno. Sin vallas genéricas: propiedad narrativa real, junto a Ecofit y Panama Sports Magazine.</p>
+      </div>
+      <div class="grid cols3">
+        <article class="card"><div class="k">↗</div><h3>Marca con propósito</h3><p>Asóciate a salud, comunidad y naturaleza — no a un logo más en una valla.</p></article>
+        <article class="card"><div class="k">↗</div><h3>Comunidad activa</h3><p>Atletas y familias movilizadas antes, durante y después de la carrera.</p></article>
+        <article class="card"><div class="k">↗</div><h3>Alcance editorial</h3><p>Cobertura y contenido a través de Panama Sports Magazine, todo el año.</p></article>
+      </div>
+      <div class="contact-box">
+        <div class="ci">
+          <h3>Cuéntanos tu marca</h3>
+          <p>Escríbenos y te enviamos las opciones de activación para esta temporada.</p>
+          <a class="mail" href="mailto:info@obstacleracepanama.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1">info@obstacleracepanama.com</a>
+        </div>
+        <a href="mailto:info@obstacleracepanama.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1" class="btn btn-primary">Escríbenos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
-    <p class="sponsor-line reveal">¿Marcas y patrocinios? Escribe a <a href="mailto:gladysgiselle@gmail.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1">gladysgiselle@gmail.com</a></p>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -302,16 +367,18 @@
   <div class="wrap">
     <div class="foot">
       <div class="foot-brand">
-        <img src="/logo.png" width="64" height="64" alt="Obstacle Race Panamá" />
+        <img src="/logo.png" width="54" height="54" alt="Obstacle Race Panamá" />
         <div>
           <b>OBSTACLE RACE PANAMÁ</b>
           <a href="https://obstacleracepanama.com/">www.obstacleracepanama.com</a>
         </div>
       </div>
       <div class="foot-links">
-        <a href="#registro" data-register>Regístrate</a>
-        <a href="mailto:gladysgiselle@gmail.com?subject=Patrocinio%20—%20Obstacle%20Race%20Panam%C3%A1">Patrocinios</a>
-        <a href="mailto:gladysgiselle@gmail.com">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#movimiento">Movimiento</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#patrocinadores">Patrocinadores</a>
+        <a href="mailto:info@obstacleracepanama.com">Contacto</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -327,38 +394,37 @@
 
     /* ==========================================================
        REGISTER_URL — PLACEHOLDER. Paste the real Google Form link.
-       All "Regístrate" buttons point here. Opens in a new tab.
+       All "Regístrate / Recibir recursos" buttons point here.
+       Until it's a valid http(s) link (no "REEMPLAZAR"), the buttons
+       fall back to a mailto so leads are still captured.
        ========================================================== */
     var REGISTER_URL = "https://forms.gle/REEMPLAZAR-CON-FORM-REAL";
+    var FALLBACK_MAIL = "mailto:info@obstacleracepanama.com?subject=Inscripci%C3%B3n%20%E2%80%94%20Obstacle%20Race%20Panam%C3%A1";
 
     var valid = /^https?:\/\//.test(REGISTER_URL) && REGISTER_URL.indexOf("REEMPLAZAR") === -1;
     document.querySelectorAll("[data-register]").forEach(function(a){
-      if (valid){
-        a.href = REGISTER_URL;
-        a.target = "_blank";
-        a.rel = "noopener";
-      }
-      /* if not yet set, links fall back to #registro (their current href) */
+      if (valid){ a.href = REGISTER_URL; a.target = "_blank"; a.rel = "noopener"; }
+      else { a.href = FALLBACK_MAIL; }
     });
 
-    /* header scrolled state */
-    var header = document.getElementById("siteHeader");
-    function onScroll(){ header.classList.toggle("scrolled", window.scrollY > 24); }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive:true });
-
-    /* scroll reveal */
-    var reveals = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window){
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
-        });
-      }, { threshold:0.12, rootMargin:"0px 0px -8% 0px" });
-      reveals.forEach(function(el){ io.observe(el); });
-    } else {
-      reveals.forEach(function(el){ el.classList.add("in"); });
+    /* ---------- Tabs (hash routing) ---------- */
+    var TABS = ["inicio","movimiento","recursos","patrocinadores"];
+    function activate(name){
+      if (TABS.indexOf(name) < 0) name = "inicio";
+      TABS.forEach(function(t){
+        var panel = document.getElementById(t);
+        var tab = document.getElementById("tab-" + t);
+        var on = (t === name);
+        panel.hidden = !on;
+        panel.classList.toggle("enter", on);
+        if (tab){ tab.classList.toggle("active", on); tab.setAttribute("aria-selected", on ? "true" : "false"); }
+      });
+      window.scrollTo(0, 0);
     }
+    window.addEventListener("hashchange", function(){
+      activate((location.hash || "").replace("#",""));
+    });
+    activate((location.hash || "").replace("#","") || "inicio");
 
     document.getElementById("year").textContent = new Date().getFullYear();
   })();
