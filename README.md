@@ -1,7 +1,7 @@
-# Obstacle Race Panamá 2026
+# Obstacle Race Panamá
 
-Static, single-page landing site for **Obstacle Race Panamá 2026** — the obstacle race
-event powered by **Ecofit × Panama Sports Magazine**.
+Static, single-page **coming-soon / teaser** site for **Obstacle Race Panamá** — the
+obstacle race that moves Panama, powered by **Ecofit × Panama Sports Magazine**.
 
 No build step. Pure static files served from the repo root.
 
@@ -10,23 +10,31 @@ No build step. Pure static files served from the repo root.
 | File | Purpose |
 | --- | --- |
 | `index.html` | The entire landing page (inline CSS + JS, Google Fonts). |
-| `favicon.svg` | Site icon / logo mark. |
+| `logo.png` | The emblem logo (used in header, hero, footer, and OG image). |
+| `favicon.svg` | Site icon. |
 | `og.png` | 1200×630 social share image (`og.svg` is its source). |
 | `_headers` | Cloudflare Pages security headers (HSTS, CSP, X-Frame-Options, etc.). |
 | `robots.txt` | Allows all crawlers, points to the sitemap. |
 | `sitemap.xml` | Single-URL sitemap for the homepage. |
 
-## Editing the countdown date
+## ⚠️ Two placeholders to replace before/after go-live
 
-The race countdown reads a single constant near the bottom of `index.html`:
+1. **Logo** — `logo.png` is currently a **stand-in emblem**. Overwrite it with the real
+   Obstacle Race Panamá artwork (square PNG, transparent or dark background works best),
+   then regenerate `og.png` from `og.svg` so the share image matches.
 
-```js
-var RACE_DATE = new Date("2026-11-14T06:00:00-05:00").getTime();
-```
+2. **Registration link** — every "Regístrate" button reads one constant near the bottom
+   of `index.html`:
 
-⚠️ **This date is a placeholder.** Replace it with the confirmed start date/time
-(Panama is UTC−05:00, no daylight saving). Also update `startDate` in the JSON-LD
-block and `<lastmod>` in `sitemap.xml` when the date is finalized.
+   ```js
+   var REGISTER_URL = "https://forms.gle/REEMPLAZAR-CON-FORM-REAL";
+   ```
+
+   Paste the real Google Form URL there. Until it's a valid `http(s)://` link (and no longer
+   contains `REEMPLAZAR`), the buttons safely fall back to scrolling to the sign-up section.
+
+Sponsorship / brand contact goes to **gladysgiselle@gmail.com** (already wired into the
+"Patrocinios" links).
 
 ## Deploy (Cloudflare Pages)
 
@@ -34,4 +42,4 @@ block and `<lastmod>` in `sitemap.xml` when the date is finalized.
 wrangler pages deploy . --project-name=obstacleracepanama
 ```
 
-DNS / custom domain (`obstacleracepanama.com`) is managed manually in the Cloudflare dashboard.
+DNS / custom domain (`obstacleracepanama.com`, Namecheap) is handled manually.

@@ -1,13 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Obstacle Race Panamá">
-  <defs>
-    <linearGradient id="pk" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="#4f7a2a"/>
-      <stop offset="1" stop-color="#a7d84a"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#0d130f"/>
-  <path d="M8 48 L24 20 L33 36 L41 24 L56 48 Z" fill="none" stroke="url(#pk)" stroke-width="2.6" stroke-linejoin="round"/>
-  <path d="M15 48 L24 32 L30 42" fill="none" stroke="#2c3d31" stroke-width="1.6"/>
-  <circle cx="41" cy="24" r="3.6" fill="#ff5a1f"/>
-  <path d="M41 24 L47 15" stroke="#ff5a1f" stroke-width="2.2" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="14" fill="#160c05"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#7a4f28" stroke-width="2.5"/>
+  <g fill="none" stroke="#c69a6a" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 42 L26 20 L34 31 L41 19 L51 42 Z" fill="#2b1a0e"/>
+    <line x1="11" y1="47" x2="53" y2="47"/>
+  </g>
+  <circle cx="41" cy="19" r="4" fill="#c0392b"/>
 </svg>
